@@ -1,0 +1,34 @@
+
+
+      // c program to clear nth bit
+      
+   #include <stdio.h>
+
+   int main(void)
+   {
+  int number,position,mask;
+ 
+  printf("enter the number\n") ; 
+  scanf("%d",&number);
+  
+  printf("enter the position\n") ;
+  scanf("%d",&position);                //lets say pos is 0 then 0000 0000
+  
+  mask=~(1<<position);                  //now evualuating braces 0000 0001  after ~ operation mask = 1111 1110
+  
+  /*
+  now bitwise and 5 and mask i.e 1111 1110 & 0000 0101  
+  which results in  0000 0100 ,, see 0th bit is zero if assumed number is 5 to clear 
+  */
+  
+  printf("the read number is changed to %d after clear its bit at position %d  ",(mask & number),position);    &                  
+  
+  return 0;
+}
+
+OUTPUT:
+enter the number
+5
+enter the position
+0
+the read number is changed to 4 after clear its bit at position 0 
