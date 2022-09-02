@@ -1,0 +1,54 @@
+
+
+
+            // c program to check the status of bit at mentioned position
+            
+            
+            
+      #include <stdio.h>
+
+int main()
+{
+  int number,position,mask,value;            
+  
+  printf("enter the number\n") ; 
+  scanf("%d",&number);                           //read a number from user
+  
+  printf("enter the position\n") ; 
+  scanf("%d",&position);                         //reading the position
+  
+  mask=(1<<position);                            //formula to shift 1 at given position
+  
+  if(value=mask & number)                        //bit wise anding with given number bit position if it has 1 , 1 is stored in value variable and if is executed
+  
+  printf("%d is present at position %d",value,position);
+  
+  else                                             //else 0 will be present at that position
+  
+  printf("0 is present at position %d",position);
+    
+  return 0;
+}
+
+OUTPUT:
+
+
+enter the number
+5
+enter the position
+0
+1 is present at position 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
