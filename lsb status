@@ -1,0 +1,36 @@
+
+
+                   // c program to check if the lsb is set or not
+#include <stdio.h>
+
+int main(void) {
+  int a=4;
+  if(a&01) printf("the lsb is set");               // if least bit is 1 after bitwise bitwise operation at lsb indexed bit then lsb is set and if evualutes to true.
+  else     printf("the lsb is not set");
+    
+  return 0;
+}
+
+
+OUTPUT:
+the lsb is not set
+
+
+
+
+ //case 2
+ 
+ 
+ #include <stdio.h>
+
+int main(void) {
+  int a=5;
+  if(a&01) printf("the lsb is set");               // if least bit is 1 after bitwise bitwise operation at lsb indexed bit then lsb is set and if evualutes to true.
+  else     printf("the lsb is not set");
+    
+  return 0;
+}
+
+
+OUTPUT:
+the lsb is  set
