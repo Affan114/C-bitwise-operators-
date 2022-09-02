@@ -1,0 +1,44 @@
+
+
+                          //c program to find lowestset bit of a number
+                          
+                          
+                          
+#include <stdio.h>
+
+int main()
+{
+  int number,i,count=0,value;                   
+ 
+  printf("enter the number\n") ; 
+  scanf("%d",&number);
+  
+  value=lowestsetbit(number);                  //function call
+  
+  if(value)
+  {
+    printf("lowest set bit is position  at %d",i);
+    }
+  else
+  {
+    printf("there are no set bits in the number ");
+  }
+
+  return 0;
+}
+  int lowestsetbit(int number)
+{
+  int i;
+  for(i=0;i<32;i++)                              //loop counter i till it reaches msb bit 
+    {
+      if(number&(1<<i))
+        return i;                                 //return i as soon as it encounters the first set bit and thats the lowest 
+    }
+    
+    
+  
+  OUTPUT:
+  
+enter the number
+100                                          ////1100100       here lowest set bit is at position 2
+lowest set bit is position  at 2
