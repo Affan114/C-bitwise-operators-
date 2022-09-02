@@ -1,0 +1,33 @@
+
+
+
+            // C program to toggle nth bit of given number
+            
+            
+#include <stdio.h>
+
+int main(void) 
+{
+  int number,position,mask;
+  
+  printf("enter the number\n") ; 
+  scanf("%d",&number);
+  
+  printf("enter the position\n") ;
+  scanf("%d",&position);
+  
+  mask=(1<<position);
+  
+  number=(mask ^ number);                         // ^ is used to toggle  if 0 is present then make it 1 if 1 is present make it 0 .this is toggling mechanism
+  
+  printf("the read number is changed to %d after toggling  its bit at position %d  ",number,position); 
+  
+  return 0;
+}
+
+OUTPUT:
+enter the number
+9                                           
+enter the position
+3                                           
+the read number is changed to 1 after toggling  its bit at position 3 
