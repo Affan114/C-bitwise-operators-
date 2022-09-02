@@ -1,0 +1,31 @@
+
+
+                          //C program to count the number of trailing zeros in a given number
+                          
+                          
+#include <stdio.h>
+
+int main(void) 
+{
+unsigned int number,i,count=0,value;
+ 
+  printf("enter the number\n") ; 
+  scanf("%d",&number);
+
+while((number&1)==0)                                  //if bitwise and with 1 at lsb results in 0 ,there zero exists there so increment count 
+    {
+      count++;
+      number>>=1;                                     //now shift the bits of number by 1 untill the loop condition fails
+    }
+    
+printf("there are %d trailing zeros in the given number",count);
+return 0;
+}
+                                   
+                                   
+                                   //lets enter 64 = 0b1000000 , as you can see there are 6 trailing zeros in 64 binary
+
+OUTPUT:
+enter the number
+64
+there are 6 trailing zeros in the given number
