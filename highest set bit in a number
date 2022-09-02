@@ -1,0 +1,31 @@
+
+
+
+                 // c program to find the highest set
+                 
+                 
+#include <stdio.h>
+
+int main(void) 
+{
+int number,i,count=0;
+ 
+  printf("enter the number\n") ; 
+  scanf("%d",&number);
+  
+  for(i=0;i<32;i++)               //loop counter i till it reaches msb
+    {
+      if(number&(1<<i))          // increment counter 1 till 32 , if expression evuluates to true then update count with 1
+       count=i; 
+    }
+    if(count>0) printf("Highest set bit is at position %d",count);
+    else        printf("there are no set bits on a given number");
+
+
+  return 0;
+}
+
+OUTPUT:
+enter the number
+100                                             //1100100 here highest set bit is at 6
+Highest set bit is position  at 6
