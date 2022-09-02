@@ -1,0 +1,31 @@
+
+
+
+
+                // program to check status of msb bit
+                
+                
+                
+                
+                
+        #include <stdio.h>
+
+int main()
+{
+  int bits,msb;
+  
+  char variable=128;              
+  
+  bits=sizeof(char)*8;            //1 byte is equal to 8 bits 
+ 
+  msb=1<<(bits-1);                //shifting count starts from zero so im shifting 1 to msb bit location
+  
+  if(msb&variable) printf("the msb is set");       //if true msb bit has 1 
+  
+  else     printf("the msb is not set");
+    
+  return 0;
+}
+
+OUTPUT:
+the msb is set
