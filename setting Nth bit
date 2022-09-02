@@ -1,0 +1,33 @@
+
+
+             //c program to set nth bit of a number
+             
+             
+             
+   #include <stdio.h>
+
+int main() 
+{
+  int number,position,mask;
+  
+  printf("enter the number\n") ; 
+  scanf("%d",&number);
+  
+  printf("enter the position\n") ;
+  scanf("%d",&position);
+  
+  mask=(1<<position);               //shifting 1 to given position
+  
+  number=mask | number;             // bit wise or it to set that particuler bit and store it to original number 
+  
+  printf("the read number is changed to %d after setting its %d",number,position);   //changes after setting a NTH bit  
+ 
+  return 0;
+}
+
+OUTPUT:
+enter the number
+7
+enter the position
+3
+the read number is changed to 15 after setting its bit at position 3 
